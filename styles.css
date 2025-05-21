@@ -1,92 +1,183 @@
-* {
-    font-family: "Poppins", sans-serif;
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: #333;
 }
 
-body {
-    padding-top: 20px;
-    padding-left: 100px;
-    padding-right: 100px; 
+.navbar {
+    background-color: #017143;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #ddd;
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo {
+    max-width: 150px;
 }
 
 .caixa-conteudo {
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    padding: 40px 20px;
 }
 
 .caixa-texto {
-    width: 600px;
+    max-width: 500px;
+    padding: 20px;
 }
 
-.caixa-imagem {
-    width: 600px;
+.caixa-texto h2 {
+    font-size: 2em;
+}
+
+.caixa-texto span {
+    color: #017143;
+}
+
+.caixa-texto button {
+    background-color: #017143;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.caixa-texto button:hover {
+    background-color: #014d30;
+}
+
+.caixa-menu {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 200px;
-}
-
-.starbucks {
-    width: 340px;
-}
-
-.caixa-menu {    
-    display: flex;    
-    margin-left: 600px;
-    gap: 20px;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
 }
 
 .botao-menu {
-    width: 80px;
+    width: 50px;
     cursor: pointer;
-    transition: 0.5s;
+    border-radius: 50%;
+    transition: transform 0.2s;
 }
 
 .botao-menu:hover {
-    transform: translateY(-25px);  
+    transform: scale(1.1);
+}
+
+.cardapio,
+.quem-somos,
+.contato {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    max-width: 200px;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #017143;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #015b36;
+}
+
+footer {       
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: black;
+    transition: background-color 0.3s ease;
 }
 
 .circulo {
-    background-color: #017143;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    clip-path: circle(600px at right 800px);
+    margin-top: 180px;
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: #017143;
+    top: -200px;
+    right: -200px;
     z-index: -1;
 }
 
-h2 {
-    color: #333333;
-    font-size: 60px;   /*tamanho da fonte*/
-    font-weight: 600;  /*grossura da fonte do texto*/
-}
-
-span {
-    color: #017143;
-    font-weight: 900;
-    font: 70px;
-}
-
-p {
-    font-size: 16px;
-}
-
-button {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 40px;
-    border: none;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-button:hover {
-    background-color: #003f25 ;
+.starbucks {
+    margin-top: 100px;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+    display: block;
+    transition: all 0.3s ease;
 }

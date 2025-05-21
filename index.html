@@ -1,53 +1,108 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <title>DevClub StarBuks</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>DevClub StarBucks</title>
 </head>
 
 <body>
-    <div class="circulo"></div>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#quem-somos">Quem Somos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-    <img src="img/logo.png" alt="">
+  <div class="circulo">
+    <img class="starbucks" id="imagem-copo" src="img/img1.png" alt="imagem-copo-starbucks" />
+  </div>
 
-    <div class="caixa-conteudo">
+  <header id="inicio">
+    <img src="img/logo.png" alt="Logo StarBucks" class="logo" />
+  </header>
 
-        <div class="caixa-texto">
-            <h2>It's just coffee It's <span>StarBucks</span></h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, debitis doloremque fugiat amet ad
-                praesentium
-                commodi dicta odio ducimus magni, fugit aperiam saepe similique quisquam molestias animi dolor eius
-                iste.
-            </p>
-            <button>Clique aqui</button>
+  <main class="caixa-conteudo">
+    <section class="caixa-texto">
+      <h2>It's just coffee It's <span>StarBucks</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, debitis
+        doloremque fugiat amet ad praesentium.
+      </p>
+      <button onclick="scrollToSection('cardapio')">Veja o Cardápio</button>
+    </section>
 
-            <div class="caixa-menu">
-                <img onclick=" trocarCor('#017143'); trocaImagem('./img/img1.png') " class="botao-menu"
-                    src="img/thumb1.png" alt="">
-                <img onclick=" trocarCor('#eb7495'); trocaImagem('./img/img2.png') " class="botao-menu"
-                    src="img/thumb2.png" alt="">
-                <img onclick=" trocarCor('#d752b1'); trocaImagem('./img/img3.png') " class="botao-menu"
-                    src="img/thumb3.png" alt="">
-            </div>
+    <div class="caixa-menu">
+      <img onclick="trocarCor('#017143'); trocaImagem('img/img1.png')" class="botao-menu" src="img/thumb1.png"
+        alt="Thumbnail 1" />
+      <img onclick="trocarCor('#eb7495'); trocaImagem('img/img2.png')" class="botao-menu" src="img/thumb2.png"
+        alt="Thumbnail 2" />
+      <img onclick="trocarCor('#d752b1'); trocaImagem('img/img3.png')" class="botao-menu" src="img/thumb3.png"
+        alt="Thumbnail 3" />
+    </div>
 
-        </div>
+    
+  </main>
 
-        <div class="caixa-imagem">
-            <img class="starbucks" src="img/img1.png" alt="imagem-copo-starbucks">
-        </div>
+  <section id="cardapio" class="cardapio">
+    <h3>Nossos Produtos</h3>
+    <div class="produtos">
+      <div class="produto">
+        <img src="img/gkpb-starbucks-nova-embalagem.jpg" alt="Café de grãos">
+        <p>Café Espresso</p>
+        <span>R$ 7,50</span>
+      </div>
+      <div class="produto">
+        <img src="img/Starbucks-Capsules.jpg" alt="Café de capsula">
+        <p>Latte</p>
+        <span>R$ 9,00</span>
+      </div>
+      <div class="produto">
+        <img src="img/What-Meal-Plan-Is-Right-For-You-9f38cc2a1b5842da86df0cc6e469e8ff.png" alt="Café ">
+        <p>Frappuccino</p>
+        <span>R$ 12,00</span>
+      </div>
+    </div>
+  </section>
 
+  <section id="quem-somos" class="quem-somos">
+    <h3>Quem Somos</h3>
+    <p>
+      Somos apaixonados por café. Nosso compromisso é entregar qualidade, sustentabilidade e sabor em cada xícara.
+    </p>
+  </section>
+
+  <section id="contato" class="contato">
+    <h3>Fale Conosco</h3>
+    <form action="https://formsubmit.co/thiagoalvez451@gmail.com" method="POST">
+  <input type="text" name="nome" placeholder="Seu nome" required>
+  <input type="email" name="email" placeholder="Seu e-mail" required>
+  <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+  <button type="submit">Enviar</button>
+
+  <!-- Configurações opcionais -->
+  <input type="hidden" name="_subject" value="Novo elogio do site!">
+  <input type="hidden" name="_captcha" value="false">
+  
+</form>
+
+  </section>
+
+  <footer id="rodape">
+    <p>Contato: thiagoalvez451@gmail.com | Tel: (11) 99999-9999</p>
+    <p>© 2025 StarBuks</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
-
-<script src="scripts.js"></script>
 
 </html>
